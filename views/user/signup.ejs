@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hello world
-</body>
+    <%- include("../partials/head.ejs") %>
+    <body>
+        <%- include("../partials/header.ejs") %>
+        <main>
+            <div>
+               <form action="/user/signup" method="post">
+                   <fieldset>
+                        <legend>Register Your Account</legend>
+                        <label >
+                            NAME: <input type="text" name="name" required/>
+                        </label>
+                        <label>
+                            USERNAME: <input type="text" name="username" required/>
+                        </label>
+                        <label>
+                            PASSWORD: <input type="password" name="password" required/>
+                        </label>
+                        <label>
+                            AGE: <input type="number" name="age" required/>
+                        </label>
+                        <label>
+                            EMAIL: <input type="string" name="email"/>
+                        </label>
+                        <input type="submit" value="Create Account">
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+    </body>
 </html>

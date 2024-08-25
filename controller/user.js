@@ -21,7 +21,7 @@ router.get('/login', (req,res)=>{
     res.render('user/login.ejs')
 })
 
-router.post('/signup', async (req,res)=>{
+router.post('/login', async (req,res)=>{
     try{
         const user = await User.findOne({username: req.body.username});
         if(!user){
