@@ -4,27 +4,49 @@
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
-            <div>
-               <form action="/user/signup" method="post">
-                   <fieldset>
-                        <legend>Register Your Account</legend>
-                        <label >
-                            NAME: <input type="text" name="name" required/>
-                        </label>
-                        <label>
-                            USERNAME: <input type="text" name="username" required/>
-                        </label>
-                        <label>
-                            PASSWORD: <input type="password" name="password" required/>
-                        </label>
-                        <label>
-                            AGE: <input type="number" name="age" required/>
-                        </label>
-                        <label>
-                            EMAIL: <input type="string" name="email"/>
-                        </label>
-                        <input type="submit" value="Create Account">
-                    </fieldset>
+            <div class="container">
+                <h1 class="title is-4">Register Your Account</h1>
+                <form class="container" action="/user/signup" method="post">
+                    <div class="field">
+                        <label for="name" class="label">NAME</label>
+                        <div class="control">
+                           <input id="name" class="input" type="text" name="name" required/>
+                        </div>       
+                        <p class="help">Please enter full name</p>                    
+                    </div>
+                    <div class="field">
+                        <label for="username" class="label">USERNAME</label>
+                        <div class="control">
+                           <input id="username" class="input" type="text" name="username" required/>
+                        </div>       
+                        <p class="help">Login name</p>                    
+                    </div>
+                    <div class="field">
+                        <label for="password" class="label">PASSWORD</label>
+                        <p class="control">
+                            <input id="password" class="input" type="password" placeholder="Password">
+                        </p>
+                    </div>
+                    <div class="field">
+                        <label for="email" class="label">EMAIL</label>
+                        <div class="control">
+                          <input id="email" class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="age" class="label">AGE</label>
+                        <div class="control">
+                           <input id="age" class="input" type="number" name="age" required/>
+                        </div>       
+                        <p class="help">Your age</p>                    
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary">
+                                Register
+                            </button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </main>

@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    new
-</body>
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <%- include("./partials/header.ejs") %>
+        <main>
+            <div>
+                <div class="container">
+                    <h1 class="title is-4">Register Your Account</h1>
+                    <form class="container" action="/games/new" method="post">
+                        <div class="field">
+                            <label for="name" class="label">NAME</label>
+                            <div class="control">
+                               <input id="name" class="input" type="text" name="name" required/>
+                            </div>       
+                            <p class="help">Please enter full name</p>                    
+                        </div>
+                        <div class="field">
+                            <label for="username" class="label">USERNAME</label>
+                            <div class="control">
+                               <input id="username" class="input" type="text" name="username" required/>
+                            </div>       
+                            <p class="help">Login name</p>                    
+                        </div>
+                        <div class="field">
+                            <label for="password" class="label">PASSWORD</label>
+                            <p class="control">
+                                <input id="password" class="input" type="password" placeholder="Password">
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label for="email" class="label">EMAIL</label>
+                            <div class="control">
+                              <input id="email" class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="age" class="label">AGE</label>
+                            <div class="control">
+                               <input id="age" class="input" type="number" name="age" required/>
+                            </div>       
+                            <p class="help">Your age</p>                    
+                        </div>
+                    <div class="field">
+                        <div class="control">
+                          <label class="radio">
+                            <input type="radio" name="rating" value="e">
+                            E
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="rating" value="e10">
+                            E 10+
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="rating" value="t">
+                            T
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="rating" value="m">
+                            M
+                          </label>
+                        </div>
+                    </div>                       
+                    <fieldset>
+                        <input type="submit" value="Create Account">
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+    </body>
 </html>
