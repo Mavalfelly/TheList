@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>landing</h1>
-</body>
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <%- include("./partials/header.ejs") %>
+            <main>
+                <%for (game of games){%>
+                    <div class="card">
+                        <div class="card-image">
+                          <figure class="image is-4by3">
+                            <img
+                              src=<%=game.logo%>
+                              alt=<%=game.name%>
+                            />
+                          </figure>
+                        </div>
+                <%}%>
+            </main>
+    </body>
 </html>

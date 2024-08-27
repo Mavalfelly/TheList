@@ -6,63 +6,71 @@
         <main>
             <div>
                 <div class="container">
-                    <h1 class="title is-4">Register Your Account</h1>
-                    <form class="container" action="/games/new" method="post">
+                    <h1 class="title is-4">Add a new Game</h1>
+                    <form class="container" action="/games" method="post">
                         <div class="field">
                             <label for="name" class="label">NAME</label>
                             <div class="control">
                                <input id="name" class="input" type="text" name="name" required/>
                             </div>       
-                            <p class="help">Please enter full name</p>                    
+                            <p class="help">Please enter the game's name.</p>                    
                         </div>
+                        <!--  -->
                         <div class="field">
-                            <label for="username" class="label">USERNAME</label>
+                            <label for="logo" class="label">LOGO</label>
                             <div class="control">
-                               <input id="username" class="input" type="text" name="username" required/>
+                               <input id="logo" class="input" type="text" name="logo" required/>
                             </div>       
-                            <p class="help">Login name</p>                    
+                            <p class="help">Insert the link to the games logo.</p>                    
                         </div>
+                        <!--  -->
                         <div class="field">
-                            <label for="password" class="label">PASSWORD</label>
+                            <label for="mainCharacter" class="label">MAIN CHARACTER</label>
                             <p class="control">
-                                <input id="password" class="input" type="password" placeholder="Password">
+                                <input id="mainCharacter" class="input" type="text" name="mainCharacter">
                             </p>
+                            <p class="help">Who is the main character?</p>
                         </div>
+                        <!--  -->
                         <div class="field">
-                            <label for="email" class="label">EMAIL</label>
+                            <label for="consoleType" class="label">CONSOLE TYPE</label>
                             <div class="control">
-                              <input id="email" class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                              <input id="consoleType" class="input" type="text" name="consoleType">
                             </div>
+                            <p class="help">What console can you play this game on? </p>
                         </div>
+                        <!--  -->
                         <div class="field">
-                            <label for="age" class="label">AGE</label>
-                            <div class="control">
-                               <input id="age" class="input" type="number" name="age" required/>
-                            </div>       
-                            <p class="help">Your age</p>                    
-                        </div>
-                    <div class="field">
                         <div class="control">
+                            <label class="label">RATING</label>
                           <label class="radio">
-                            <input type="radio" name="rating" value="e">
+                            <input type="radio" name="rating" value="E">
                             E
                           </label>
                           <label class="radio">
-                            <input type="radio" name="rating" value="e10">
+                            <input type="radio" name="rating" value="E 10">
                             E 10+
                           </label>
                           <label class="radio">
-                            <input type="radio" name="rating" value="t">
+                            <input type="radio" name="rating" value="T">
                             T
                           </label>
                           <label class="radio">
-                            <input type="radio" name="rating" value="m">
+                            <input type="radio" name="rating" value="M">
                             M
                           </label>
                         </div>
+                        <!--  -->
+                        <div class="field">
+                            <label for="addedBy" class="label">ADDED BY</label>
+                            <div class="control">
+                               <input id="addedBy" class="input" type="text" name="addedBy" required/>
+                            </div>       
+                            <p class="help">Your name.</p>                    
+                        </div>
                     </div>                       
                     <fieldset>
-                        <input type="submit" value="Create Account">
+                        <input type="submit" value="Add the Game">
                     </fieldset>
                 </form>
             </div>

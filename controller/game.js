@@ -6,7 +6,7 @@ router.get('/', async (req,res) => {
     try{
         const games = await Game.find()
         console.log(games)
-        res.render('landing.ejs') 
+        res.render('landing.ejs',{games}) 
     }catch(err){
         res.sendStatus(400).json(err)
     }
@@ -16,10 +16,10 @@ router.get('/new', (req,res) => {
 });
 router.post('/', async (req,res) => {
     try{
-        req.body.username = req.session.username
-        await Game.create(req,res)
-        console.log(games)
-        res.redirect('/games') 
+        console.log(req.body)
+        //req.body.username = req.session.username
+        await Game.create(req.body)
+        res.redirect('/games')
     }catch(err){
         res.sendStatus(400).json(err)
     }

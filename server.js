@@ -6,7 +6,7 @@ const session = require('express-session');
 const PORT = process.env.PORT
 const MongoStore = require('connect-mongo');
 const app = express();
-const GameInfo = require('./models/game');
+const Game = require('./models/game');
 const GameRouter = require('./controller/game');
 const UserRouter = require('./controller/user')
 
