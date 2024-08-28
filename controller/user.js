@@ -8,7 +8,7 @@ const Game = require('../models/game');
 router.get('/landing', async (req,res) => {
     try{
         const games = await Game.find()
-        res.render('landing.ejs',{games}) 
+        res.render('./user/landing.ejs',{games}) 
     }catch(err){
         res.sendStatus(400).json(err)
     }
@@ -35,7 +35,7 @@ router.post('/login', async (req,res)=>{
     try{
         const user = await User.findOne({username: req.body.username});
         if(!user){
-            res.render('wrongU.ejs')
+            res.redirect('/user/signup')
         }else{
             const passwordMatch = bcrypt.compareSync(req.body.password, user.password)
             if(passwordMatch){
