@@ -53,7 +53,6 @@ router.post('/login', async (req,res)=>{
     }
 })
 router.get("/logout", (req, res) => {
-    // destroy session and redirect to main page
     req.session.destroy((err) => {
         res.clearCookie()
         res.redirect("/user/login")

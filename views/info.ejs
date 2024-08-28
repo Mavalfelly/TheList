@@ -41,24 +41,11 @@
                         </div>
                         <!--  -->
                         <div class="field">
-                        <div class="control">
-                            <label class="label">RATING</label>
-                          <label class="radio">
-                            <input type="radio" name="rating" value="E">
-                            E
-                          </label>
-                          <label class="radio">
-                            <input type="radio" name="rating" value="E 10">
-                            E 10+
-                          </label>
-                          <label class="radio">
-                            <input type="radio" name="rating" value="T">
-                            T
-                          </label>
-                          <label class="radio">
-                            <input type="radio" name="rating" value="M">
-                            M
-                          </label>
+                            <label for="rating" class="label">Rating</label>
+                            <div class="control">
+                                <input class="input" type="text" value="<%=game.rating%>">
+                            </div>
+                            <p class="help">What is this games rating? </p>
                         </div>
                         <!--  -->
                         <div class="field">
@@ -69,13 +56,15 @@
                             <p class="help">Your name.</p>                    
                         </div>
                     </div>                       
-                    <fieldset>
-                        <input type="submit" value="Submit Edits for <%=game.name%>">
-                    </fieldset>
-                    <form class="container" action="/games/<%=game._id%>?_method=DELETE" method="post">
-                        <input type="submit" value="Delete <%=game.name%>">
-                    </form>
+                    <div class="container">
+                        <input class="input is-info" type="submit" value="Submit Edits for <%=game.name%>">
+                    </div>
                 </form>
+                <div class="container">
+                    <form class="container" action="/games/<%=game._id%>?_method=DELETE" method="post">
+                        <input class="input is-danger" type="submit" value="Delete <%=game.name%>">
+                    </form>
+                </div>
             </div>
         </main>
     </body>

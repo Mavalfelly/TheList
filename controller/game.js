@@ -54,7 +54,7 @@ router.delete('/:id', async (req,res) => {
     try{
         const id = req.params.id
         const game = await Game.findByIdAndDelete(id);
-        res.redirect('/fruit')
+        res.redirect('/games')
     }catch(err){
         res.sendStatus(400).json(err)
     }

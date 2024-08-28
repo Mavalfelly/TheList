@@ -4,20 +4,27 @@
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
-            <div>
-               <form action="/user/login" method="post">
-                   <fieldset>
-                        <legend>User Login</legend>
-                        <label>
-                            USERNAME: <input type="text" name="username" required/>
-                        </label>
-                        <label>
-                            PASSWORD: <input type="text" name="password" required/>
-                        </label>
-                        <input type="submit" value="Login">
-                    </fieldset>
-                </form>
-            <a href="/user/signup" class="button"><button class="button"></button></a>    
+            <div class="container">
+                <h1 class="title is-4">User Login</h1>
+                <form class="container" action="/user/login" method="post">
+                   <div class="field">
+                        <label for="username" class="label">USERNAME</label>
+                            <div class="control">
+                                <input name="username" id="username" type="text">
+                            </div>
+                        <label for="username" class="label">Password</label>
+                            <div class="control">
+                                <input name="password" id="password" type="text">
+                            </div>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary">
+                                    Login
+                                </button>
+                            </div>
+                        </div>
+                    </div>    
+                </form>   
             </div>
         </main>
     </body>

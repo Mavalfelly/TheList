@@ -4,10 +4,10 @@
     <body>
         <%- include("../partials/header.ejs") %>
             <main>
-                <div>
-                    <button class="button">Create Account</button>
-                    <button class="button">Log In</button>
-                </div> 
+              <div class="control">
+                <a href="/user/signup"><button class="button is-link">SignUp</button></a>
+                <a href="/user/login"><button class="button is-link">LogIn</button></a>
+              </div> 
                 <%for (game of games){%>
                     <div class="columns is-centered">
                       <div class="column is-half">
