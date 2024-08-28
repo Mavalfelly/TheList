@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head.ejs") %>
+    <%- include("../partials/head.ejs") %>
     <body>
-        <%- include("./partials/header.ejs") %>
+        <%- include("../partials/header.ejs") %>
             <main>
+                <div>
+                    <button class="button">Create Account</button>
+                    <button class="button">Log In</button>
+                </div> 
                 <%for (game of games){%>
-                  <a href="/games/<%=game._id%>">
                     <div class="columns is-centered">
                       <div class="column is-half">
                         <div class="card">
@@ -24,8 +27,7 @@
                           </div>
                         </div>    
                       </div>
-                    </div>
-                  </a>  
+                    </div>  
                 <%}%>
             </main>
     </body>

@@ -2,7 +2,17 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
+const Game = require('../models/game');
 
+
+router.get('/landing', async (req,res) => {
+    try{
+        const games = await Game.find()
+        res.render('landing.ejs',{games}) 
+    }catch(err){
+        res.sendStatus(400).json(err)
+    }
+})
 router.get('/signup', (req,res)=>{
     res.render('user/signup.ejs')
 })

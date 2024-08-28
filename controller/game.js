@@ -2,6 +2,14 @@ const express = require('express');
 const router = express.Router();
 const Game = require('../models/game');
 
+router.use((req,res,next)=>{
+    if(req.session.loggedIn){
+        next()
+    }else{
+        res.redirect('/user/landing')
+    }
+})
+
 router.get('/', async (req,res) => {
     try{
         const games = await Game.find()
@@ -28,7 +36,7 @@ router.get('/:id', async (req, res) => {
     try{
     const id = req.params.id;
     const game = await Game.findById(id);
-    res.render('edit.ejs', { game });
+    res.render('info.ejs', { game });
     }catch(err){
         res.sendStatus(400).json(err)
     }
