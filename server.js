@@ -34,6 +34,10 @@ app.get('/test',(req,res)=>{
     res.send('<h1>hello world. we wre connected</h1>')
 });
 
+app.get('/', (req,res) => {
+    res.redirect('/user/landing')
+})
+
 app.listen(PORT,()=>{
     console.log(`You are listening to Port ${process.env.PORT}`)
 });
