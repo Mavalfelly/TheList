@@ -41,12 +41,25 @@
                         </div>
                         <!--  -->
                         <div class="field">
-                            <label for="rating" class="label">Rating</label>
                             <div class="control">
-                                <input class="input" type="text" value="<%=game.rating%>">
+                                <label class="label">RATING</label>
+                              <label class="radio">
+                                <input type="radio" name="rating" value="E" <%= game.rating === "E" ? "checked" : "" %>>
+                                E
+                              </label>
+                              <label class="radio">
+                                <input type="radio" name="rating" value="E 10" <%= game.rating === "E 10" ? "checked" : "" %>>
+                                E 10+
+                              </label>
+                              <label class="radio">
+                                <input type="radio" name="rating" value="T" <%= game.rating === "T" ? "checked" : "" %>>
+                                T
+                              </label>
+                              <label class="radio">
+                                <input type="radio" name="rating" value="M" <%= game.rating === "M" ? "checked" : "" %>>
+                                M
+                              </label>
                             </div>
-                            <p class="help">What is this games rating? </p>
-                        </div>
                         <!--  -->
                         <div class="field">
                             <label for="addedBy" class="label">ADDED BY</label>
