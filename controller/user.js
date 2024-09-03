@@ -35,7 +35,7 @@ router.post('/login', async (req,res)=>{
     try{
         const user = await User.findOne({username: req.body.username});
         if(!user){
-            res.render('wrongInfo.ejs')
+            res.render('user/wrongInfo.ejs')
         }else{
             const passwordMatch = bcrypt.compareSync(req.body.password, user.password)
             if(passwordMatch){
@@ -44,7 +44,7 @@ router.post('/login', async (req,res)=>{
                 req.session.loggedIn = true;
                 res.redirect('/games')
             }else{
-                res.render('wrongInfo.ejs')
+                res.render('user/wrongInfo.ejs')
             }
         }
 
@@ -55,7 +55,7 @@ router.post('/login', async (req,res)=>{
 router.get("/logout", (req, res) => {
     req.session.destroy((err) => {
         res.clearCookie()
-        res.redirect("/user/login")
+        res.redirect("/user/landing")
     })
 })
 module.exports = router

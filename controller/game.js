@@ -25,9 +25,10 @@ router.get('/new', (req,res) => {
 router.post('/', async (req,res) => {
     try{
         console.log(req.body)
+        const user = req.session.username
         //req.body.username = req.session.username
         await Game.create(req.body)
-        res.redirect('/games')
+        res.redirect('/games', user)
     }catch(err){
         res.sendStatus(400).json(err)
     }

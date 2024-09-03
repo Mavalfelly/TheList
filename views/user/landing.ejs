@@ -2,33 +2,41 @@
 <html lang="en">
     <%- include("../partials/head.ejs") %>
     <body>
-        <%- include("../partials/header.ejs") %>
-            <main>
-              <div class="control">
-                <a href="/user/signup"><button class="button is-link">SignUp</button></a>
-                <a href="/user/login"><button class="button is-link">LogIn</button></a>
-              </div> 
-                <%for (game of games){%>
-                    <div class="columns is-centered">
-                      <div class="column is-half">
-                        <div class="card">
-                          <header class="card-header">
-                            <p class="card-header-title"><%=game.name%></p>
-                            <button class="card-header-icon" aria-label="more options">
-                              <span class="icon">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                              </span>
-                            </button>
-                          </header>
-                          <div class="card-image">
-                            <figure class="image 64x64">
-                              <img src=<%=game.logo%> alt=<%=game.name%>/>                            
-                            </figure>
-                          </div>
-                        </div>    
-                      </div>
-                    </div>  
-                <%}%>
-            </main>
+      <br>
+        <div class="columns is-centered">
+          <%- include("../partials/header.ejs") %>
+        </div>
+      </div>
+      <br>
+      <main>
+        <div class="control">
+          <div class="columns is-centered">
+            <a href="/user/signup"><button class="button is-primary">SignUp</button></a>
+            <a href="/user/login"><button class="button is-primary">LogIn</button></a>
+          </div>
+          <br>
+        </div> 
+          <%for (game of games){%>
+              <div class="columns is-centered">
+                <div class="column is-half">
+                  <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title"><%=game.name%></p>
+                      <button class="card-header-icon" aria-label="more options">
+                        <span class="icon">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </header>
+                    <div class="card-image">
+                      <figure class="image 64x64">
+                        <img src=<%=game.logo%> alt=<%=game.name%>/>                            
+                      </figure>
+                    </div>
+                  </div>    
+                </div>
+              </div>  
+          <%}%>
+      </main>
     </body>
 </html>
