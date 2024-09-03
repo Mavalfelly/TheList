@@ -25,10 +25,9 @@ router.get('/new', (req,res) => {
 router.post('/', async (req,res) => {
     try{
         console.log(req.body)
-        const user = req.session.username
-        //req.body.username = req.session.username
+        req.body.username = req.session.username;
         await Game.create(req.body)
-        res.redirect('/games', user)
+        res.redirect('/games')
     }catch(err){
         res.sendStatus(400).json(err)
     }
@@ -44,6 +43,7 @@ router.get('/:id', async (req, res) => {
 });
 router.put('/:id', async (req,res) => {
     try{
+        req.body.lastEditedBy = req.session.username;
         const id = req.params.id;
         const game = await Game.findByIdAndUpdate(id, req.body);
         res.redirect('/games')

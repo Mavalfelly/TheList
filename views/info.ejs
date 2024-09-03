@@ -2,7 +2,11 @@
 <html lang="en">
     <%- include("./partials/head.ejs") %>
     <body>
-        <%- include("./partials/header.ejs") %>
+        <br>
+        <div class="columns is-centered">
+          <%- include("./partials/header.ejs") %>
+        </div>  
+        <br>
         <main>
             <div>
                 <div class="container">
@@ -62,11 +66,16 @@
                             </div>
                         <!--  -->
                         <div class="field">
-                            <label for="addedBy" class="label">ADDED BY</label>
+                            <label for="username" class="label">ADDED BY</label>
                             <div class="control">
-                               <input id="addedBy" class="input" type="text" name="addedBy" value="<%=game.addedBy%>" required/>
-                            </div>       
-                            <p class="help">Your name.</p>                    
+                               <input id="username" class="input" type="text" name="username" value="<%=game.username%>" disabled/>
+                            </div>                    
+                        </div>
+                        <div class="field">
+                            <label for="lastEditedBy" class="label">ADDED BY</label>
+                            <div class="control">
+                               <input id="lastEditedBy" class="input" type="text" name="lastEditedBy" value="<%=game.lastEditedBy%>" readonly/>
+                            </div>                           
                         </div>
                     </div>                       
                     <div class="container">

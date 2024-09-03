@@ -2,7 +2,11 @@
 <html lang="en">
     <%- include("./partials/head.ejs") %>
     <body>
-        <%- include("./partials/header.ejs") %>
+        <br>
+        <div class="columns is-centered">
+          <%- include("./partials/header.ejs") %>
+        </div>  
+        <br>
         <main>
             <div>
                 <div class="container">
@@ -61,13 +65,6 @@
                           </label>
                         </div>
                         <!--  -->
-                        <div class="field">
-                            <label for="addedBy" class="label">ADDED BY</label>
-                            <div class="control">
-                               <input id="addedBy" class="input" type="text" name="addedBy" required/>
-                            </div>       
-                            <p class="help">Your name.</p>                    
-                        </div>
                     </div>                       
                     <div class="field">
                         <div class="control">
