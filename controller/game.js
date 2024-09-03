@@ -27,15 +27,14 @@ router.post('/', async (req,res) => {
         console.log(req.body)
         req.body.username = req.session.username;
         await Game.create(req.body)
-        res.redirect('/games', user)
+        res.redirect('/games')
     }catch(err){
-        res.send(400).json(err)
+        res.sendStatus(400).json(err)
     }
 });
 router.get('/:id', async (req, res) => {
     try{
     const id = req.params.id;
-    req.body.username = req.session.username;
     const game = await Game.findById(id);
     res.render('info.ejs', { game });
     }catch(err){
@@ -44,6 +43,7 @@ router.get('/:id', async (req, res) => {
 });
 router.put('/:id', async (req,res) => {
     try{
+        req.body.lastEditedBy = req.session.username;
         const id = req.params.id;
         const game = await Game.findByIdAndUpdate(id, req.body);
         res.redirect('/games')
