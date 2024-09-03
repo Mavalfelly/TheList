@@ -1,0 +1,7 @@
+body {
+    background-image: url('https://img.freepik.com/premium-photo/game-room-with-computer-bookshelf_902846-11745.jpg?w=1380');
+    background-size: cover; /* Ensures the image covers the whole background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  
