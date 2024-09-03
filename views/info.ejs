@@ -64,16 +64,14 @@
                         <div class="field">
                             <label for="username" class="label">ADDED BY</label>
                             <div class="control">
-                               <input id="username" class="input" type="text" name="username" value="<%=game.username%>" readonly/>
-                            </div>       
-                            <p class="help">Your name.</p>                    
+                               <input id="username" class="input" type="text" name="username" value="<%=game.username%>" disabled/>
+                            </div>                    
                         </div>
                         <div class="field">
-                            <label for="addedBy" class="label">ADDED BY</label>
+                            <label for="lastEditedBy" class="label">ADDED BY</label>
                             <div class="control">
-                               <input id="addedBy" class="input" type="text" name="addedBy" required/>
-                            </div>       
-                            <p class="help">Your name.</p>                    
+                               <input id="lastEditedBy" class="input" type="text" name="lastEditedBy" value="<%=game.lastEditedBy%>" readonly/>
+                            </div>                           
                         </div>
                     </div>                       
                     <div class="container">

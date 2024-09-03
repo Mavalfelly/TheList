@@ -29,12 +29,13 @@ router.post('/', async (req,res) => {
         await Game.create(req.body)
         res.redirect('/games', user)
     }catch(err){
-        res.sendStatus(400).json(err)
+        res.send(400).json(err)
     }
 });
 router.get('/:id', async (req, res) => {
     try{
     const id = req.params.id;
+    req.body.username = req.session.username;
     const game = await Game.findById(id);
     res.render('info.ejs', { game });
     }catch(err){
