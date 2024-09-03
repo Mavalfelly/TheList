@@ -6,7 +6,7 @@ const GameSchema = new mongoose.Schema({
     mainCharacter: String,
     consoleType: String,
     rating: String,
-    addedBy: String,
+    username: String,
 })
 const GameInfo=mongoose.model('games',GameSchema);
 module.exports = GameInfo
