@@ -35,7 +35,7 @@ router.post('/login', async (req,res)=>{
     try{
         const user = await User.findOne({username: req.body.username});
         if(!user){
-            res.redirect('/user/signup')
+            res.render('wrongInfo.ejs')
         }else{
             const passwordMatch = bcrypt.compareSync(req.body.password, user.password)
             if(passwordMatch){
@@ -44,7 +44,7 @@ router.post('/login', async (req,res)=>{
                 req.session.loggedIn = true;
                 res.redirect('/games')
             }else{
-                res.render('wrongP.ejs')
+                res.render('wrongInfo.ejs')
             }
         }
 
