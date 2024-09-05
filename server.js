@@ -11,7 +11,7 @@ const GameRouter = require('./controller/game');
 const UserRouter = require('./controller/user')
 
 
-//////////////////////////////////////
+//////////////////////////////////////     https://img.freepik.com/premium-photo/game-room-with-computer-bookshelf_902846-11745.jpg?w=1380
 ////////////MIDDLEWARE////////////////
 //////////////////////////////////////
 app.use(morgan('tiny'));
