@@ -1,6 +1,90 @@
-body {
+/* html {
     background-image: url('Background.jpg');
-    background-size: cover; /* Ensures the image covers the whole background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-  }
+    background-size: cover; Ensures the image covers the whole background
+    background-position: center; Centers the image
+    background-repeat: no-repeat; Prevents the image from repeating
+  } */
+/* .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+.title{
+  display: flex;
+  justify-content: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  border: 5px;
+}
+.control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  border: 5px;
+}
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  max-height: 286px;
+  /* min-height: 286px; */
+  max-width: 400px;
+  border: 5px;
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardHeader{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.label{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.help{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input{
+  max-width: 469px;
+}
+.has-text-danger{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 25px
+}
+#crdLI{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    max-height: 286px;
+    /* min-height: 286px; */
+    max-width: 400px;
+    border: 5px;
+    margin-bottom: 30px;
+}
