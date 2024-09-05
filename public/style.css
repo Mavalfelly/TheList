@@ -3,7 +3,6 @@ body {
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
-    overflow-y: scroll;
   }
 .title{
   display: flex;
@@ -30,6 +29,7 @@ body {
   /* min-height: 286px; */
   max-width: 400px;
   border: 5px;
+  margin-bottom: 30px;
 }
 main{
   display: flex;
@@ -90,7 +90,7 @@ main{
   margin: 5px;
 }
 .logo{
-  height: 200px;
-  width: 400px;
+  max-height: 250px;
+  width: 400px !important;
   object-fit: fill;
 }
