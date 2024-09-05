@@ -17,16 +17,7 @@
           <br>
         </div> 
           <%for (game of games){%>
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title"><%=game.name%></p>
-              </header>
-              <div class="card-image">
-                <figure class="image">
-                  <img src=<%=game.logo%> alt=<%=game.name%>/>                            
-                </figure>
-              </div>
-            </div>    
+            <%- include("../partials/card.ejs") %>
           <%}%>
       </main>
     </body>
