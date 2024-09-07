@@ -7,6 +7,6 @@ Deployed Link: https://the-videogame-archive.onrender.com
 
 Attributions: Bulma CSS, Davd Yim, Denis Dujota
 
-Tech Used: JS, EJS, CSS Styling, Github, and Render.com
+Tech Used: JS, EJS, CSS Styling, bcrypt, express, mogoose, Github, and Render.com
 
 Next Steps: add a coment section
