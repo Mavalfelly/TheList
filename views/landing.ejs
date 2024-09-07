@@ -3,40 +3,24 @@
     <%- include("./partials/head.ejs") %>
     <body>
       <br>
-      <div class="columns is-centered">
-        <%- include("./partials/header.ejs") %>
-      </div>  
+        <div class="columns is-centered">
+          <%- include("./partials/header.ejs") %>
+        </div>
+      </div>
       <br>
-        <main>
-          <div class="control">
-            <div class="columns is-centered">
-              <a href="/games/new"><button class="button is-primary">Add a Game</button></a>
-              <a href="/user/logout"><button class="button is-primary">LogOut</button></a>
-            </div>  
+      <main>
+        <div class="control">
+          <div class="columns is-centered">
+            <a href="/games/new"><button class="button is-primary mx-4">Add a Game</button></a>
+            <a href="/user/logout"><button class="button is-primary mx-4">LogOut</button></a>
           </div>
-            <%for (game of games){%>
-              <a href="/games/<%=game._id%>">
-                <div class="columns is-centered">
-                  <div class="column is-half">
-                    <div class="card">
-                      <header class="card-header">
-                        <p class="card-header-title"><%=game.name%></p>
-                        <button class="card-header-icon" aria-label="more options">
-                          <span class="icon">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                          </span>
-                        </button>
-                      </header>
-                      <div class="card-image">
-                        <figure class="image">
-                          <img src=<%=game.logo%> alt=<%=game.name%>/>                            
-                        </figure>
-                      </div>
-                    </div>    
-                  </div>
-                </div>
-              </a>  
-            <%}%>
-        </main>
+          <br>
+        </div> 
+          <%for (game of games){%>
+            <a href="/games/<%=game._id%>">
+              <%- include("./partials/card.ejs") %>
+            </a>
+          <%}%>
+      </main>
     </body>
 </html>

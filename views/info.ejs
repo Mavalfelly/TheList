@@ -8,86 +8,96 @@
         </div>  
         <br>
         <main>
-            <div>
-                <div class="container">
-                    <h1 class="title is-4">Edit <%=game.name%></h1>
-                    <form class="container" action="/games/<%=game._id%>?_method=PUT" method="post">
-                        <div class="field">
-                            <label for="name" class="label">NAME</label>
-                            <div class="control">
-                               <input id="name" class="input" type="text" name="name" value="<%=game.name%>" required/>
-                            </div>       
-                            <p class="help">Please enter the game's name.</p>                    
+            <div class="container">
+                <h1 class="title is-4">Edit <%=game.name%></h1>
+                <form class="container" action="/games/<%=game._id%>?_method=PUT" method="post">
+                    <div class="field">
+                        <label for="name" class="label">NAME</label>
+                        <div class="control">
+                            <input id="name" class="input" type="text" name="name" value="<%=game.name%>" required/>
+                        </div>       
+                        <p class="help">Please enter the game's name.</p>                    
+                    </div>
+                    <!--  -->
+                    <div class="field">
+                        <label for="logo" class="label">LOGO</label>
+                        <div class="control">
+                            <input id="logo" class="input" type="text" name="logo" value="<%=game.logo%>" required/>
+                        </div>       
+                        <p class="help">Insert the link to the games logo.</p>                    
+                    </div>
+                    <!--  -->
+                    <div class="field">
+                        <label for="mainCharacter" class="label">MAIN CHARACTER</label>
+                        <p class="control">
+                            <input id="mainCharacter" class="input" type="text" name="mainCharacter" value="<%=game.mainCharacter%>">
+                        </p>
+                        <p class="help">Who is the main character?</p>
+                    </div>
+                    <!--  -->
+                    <div class="field">
+                        <label for="consoleType" class="label">CONSOLE TYPE</label>
+                        <div class="control">
+                            <input id="consoleType" class="input" type="text" name="consoleType" value="<%=game.consoleType%>">
                         </div>
-                        <!--  -->
-                        <div class="field">
-                            <label for="logo" class="label">LOGO</label>
-                            <div class="control">
-                               <input id="logo" class="input" type="text" name="logo" value="<%=game.logo%>" required/>
-                            </div>       
-                            <p class="help">Insert the link to the games logo.</p>                    
+                        <p class="help">What console can you play this game on? </p>
+                    </div>
+                    <!--  -->
+                    <div class="field">
+                        <label class="label">RATING</label>
+                        <div class="control" id="radio">
+                            <label class="radio">
+                            <input type="radio" name="rating" value="E" <%= game.rating === "E" ? "checked" : "" %>>
+                            E
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="rating" value="E 10" <%= game.rating === "E 10" ? "checked" : "" %>>
+                            E 10+
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="rating" value="T" <%= game.rating === "T" ? "checked" : "" %>>
+                            T
+                            </label>
+                            <label class="radio">
+                            <input type="radio" name="rating" value="M" <%= game.rating === "M" ? "checked" : "" %>>
+                            M
+                            </label>
                         </div>
-                        <!--  -->
-                        <div class="field">
-                            <label for="mainCharacter" class="label">MAIN CHARACTER</label>
-                            <p class="control">
-                                <input id="mainCharacter" class="input" type="text" name="mainCharacter" value="<%=game.mainCharacter%>">
-                            </p>
-                            <p class="help">Who is the main character?</p>
-                        </div>
-                        <!--  -->
-                        <div class="field">
-                            <label for="consoleType" class="label">CONSOLE TYPE</label>
-                            <div class="control">
-                              <input id="consoleType" class="input" type="text" name="consoleType" value="<%=game.consoleType%>">
-                            </div>
-                            <p class="help">What console can you play this game on? </p>
-                        </div>
-                        <!--  -->
-                        <div class="field">
-                            <div class="control">
-                                <label class="label">RATING</label>
-                              <label class="radio">
-                                <input type="radio" name="rating" value="E" <%= game.rating === "E" ? "checked" : "" %>>
-                                E
-                              </label>
-                              <label class="radio">
-                                <input type="radio" name="rating" value="E 10" <%= game.rating === "E 10" ? "checked" : "" %>>
-                                E 10+
-                              </label>
-                              <label class="radio">
-                                <input type="radio" name="rating" value="T" <%= game.rating === "T" ? "checked" : "" %>>
-                                T
-                              </label>
-                              <label class="radio">
-                                <input type="radio" name="rating" value="M" <%= game.rating === "M" ? "checked" : "" %>>
-                                M
-                              </label>
-                            </div>
-                        <!--  -->
-                        <div class="field">
-                            <label for="username" class="label">ADDED BY</label>
-                            <div class="control">
-                               <input id="username" class="input" type="text" name="username" value="<%=game.username%>" disabled/>
-                            </div>                    
-                        </div>
-                        <div class="field">
-                            <label for="lastEditedBy" class="label">ADDED BY</label>
-                            <div class="control">
-                               <input id="lastEditedBy" class="input" type="text" name="lastEditedBy" value="<%=game.lastEditedBy%>" readonly/>
-                            </div>                           
-                        </div>
+                    <!--  -->
+                    <div class="field">
+                        <label for="username" class="label">ADDED BY</label>
+                        <div class="control">
+                            <p><%=game.username%></p>
+                        </div>                    
+                    </div>
+                    <div class="field">
+                        <label for="lastEditedBy" class="label">LAST EDITED BY</label>
+                        <div class="control">
+                            <p id="lastEditedBy"> <%=game.lastEditedBy%>
+                        </div>                           
+                    </div>
                     </div>                       
-                    <div class="container">
-                        <input class="input is-info" type="submit" value="Submit Edits for <%=game.name%>">
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-info">
+                                Submit Edits for <%=game.name%>
+                            </button>
+                        </div>
                     </div>
                 </form>
-                <div class="container">
-                    <form class="container" action="/games/<%=game._id%>?_method=DELETE" method="post">
-                        <input class="input is-danger" type="submit" value="Delete <%=game.name%>">
-                    </form>
-                </div>
             </div>
+            <div class="container">
+                <form class="container" action="/games/<%=game._id%>?_method=DELETE" method="post">
+                    <div class="control">
+                        <button class="button is-danger">
+                            Delete <%=game.name%>
+                        </button>
+                    </div>
+                </form>
+            </div> 
         </main>
+        <div id="leaveAlone4">
+            <a href="/games"><button class="button is-primary">Back</button></a>
+        </div>
     </body>
 </html>

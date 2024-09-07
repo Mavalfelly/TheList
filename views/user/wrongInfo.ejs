@@ -10,26 +10,33 @@
         <main>
             <div class="container">
                 <h1 class="title is-4">User Login</h1>
-                <h2 class="has-text-danger">You have entered the wrong Username or Password. Please try again.</h2>
-                <form class="container" action="/user/login" method="post">
-                   <div class="field">
-                        <label for="username" class="label">USERNAME</label>
+                <h2 class="has-background-danger-dark">You have entered the wrong Username or Password. Please try again.</h2>
+                    <form class="container" action="/user/login" method="post">
+                        <div class="field">
+                            <label for="username" class="label">USERNAME</label>
                             <div class="control">
-                                <input name="username" id="username" type="text">
-                            </div>
-                        <label for="username" class="label">Password</label>
-                            <div class="control">
-                                <input name="password" id="password" type="text">
-                            </div>
+                                <input id="username" class="input" type="text" name="username" required/>
+                            </div>       
+                            <p class="help">Login name</p>                    
+                        </div>
+                        <div class="field">
+                            <label for="password" class="label">PASSWORD</label>
+                            <p class="control">
+                                <input id="password" class="input" type="password" name="password" placeholder="Password">
+                            </p>
+                        </div>
                         <div class="field">
                             <div class="control">
                                 <button class="button is-primary">
-                                    Login
+                                    Log In
                                 </button>
                             </div>
                         </div>
-                    </div>    
-                </form>   
+                    </form>
+                    <div id="leaveAlone5">
+                        <a href="/user/landing"><button class="button is-primary">back</button></a>
+                    </div>                   
+                </div>
             </div>
         </main>
     </body>

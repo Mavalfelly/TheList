@@ -52,6 +52,9 @@ router.post('/login', async (req,res)=>{
         res.sendStatus(400).json(err)
     }
 })
+router.get('/wrong', (req,res)=>{
+    res.render('user/wrongInfo.ejs')
+})
 router.get("/logout", (req, res) => {
     req.session.destroy((err) => {
         res.clearCookie()
