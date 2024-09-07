@@ -1,9 +1,8 @@
-body {
-    background-image: url('Background.jpg');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow-y: scroll;
+html {
+  background-image: url('Background3.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
   }
 .title{
   display: flex;
@@ -11,6 +10,7 @@ body {
   margin-left: 25px;
   margin-right: 25px;
   border: 5px;
+  color: rgb(0, 0, 0);
 }
 .control{
   display: flex;
@@ -19,6 +19,7 @@ body {
   margin-left: 25px;
   margin-right: 25px;
   border: 5px;
+  color: rgb(0, 0, 0);
 }
 .card{
   display: flex;
@@ -27,9 +28,10 @@ body {
   justify-content: center;
   align-items: center;
   max-height: 286px;
-  /* min-height: 286px; */
   max-width: 400px;
   border: 5px;
+  margin-bottom: 30px;
+  color: rgb(0, 0, 0);
 }
 main{
   display: flex;
@@ -47,10 +49,11 @@ main{
 }
 .label{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: rgb(0, 0, 0);
 }
 .help{
   display: flex;
@@ -58,11 +61,12 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: rgb(0, 0, 0);
 }
 .input{
   max-width: 469px;
 }
-.has-text-danger{
+.has-background-danger-dark{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -71,26 +75,39 @@ main{
   margin-left: 25px;
   margin-right: 25px
 }
-/* #crdLI{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  max-height: 286px;
-  max-width: 400px;
-  border: 5px;
-  margin-bottom: 30px;
-} */
 #radio{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 5px;
 }
 .logo{
-  height: 200px;
-  width: 400px;
+  max-height: 250px;
+  width: 400px !important;
   object-fit: fill;
+  min-height: 225px;
+}
+#edits{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#leaveAlone{
+  margin-bottom: 205px;
+}
+#leaveAlone2{
+  margin-bottom: 60px;
+}
+#leaveAlone3{
+  margin-bottom: 60px;
+}
+#leaveAlone4{
+  margin-bottom: 286px;
+}
+#leaveAlone5{
+  margin-bottom: 270px;
 }
