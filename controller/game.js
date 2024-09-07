@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
     const game = await Game.findById(id);
     res.render('info.ejs', { game });
     }catch(err){
-        res.sendStatus(400).json(err)
+        res.status(400).json(err)
     }
 });
 router.put('/:id', async (req,res) => {
@@ -59,8 +59,8 @@ router.delete('/:id', async (req,res) => {
     }catch(err){
         res.sendStatus(400).json(err)
     }
-
 })
-
-
+router.get('/wong', (req,res)=>{
+    res.render('/user/wrongInfo.ejs')
+})
 module.exports = router
