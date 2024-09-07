@@ -32,22 +32,21 @@ router.get('/login', (req,res)=>{
 })
 
 router.post('/login', async (req,res)=>{
-    try{
-        const user = await User.findOne({username: req.body.username});
-        if(!user){
-            res.render('user/wrongInfo.ejs')
+try{
+    const user = await User.findOne({username: req.body.username});
+    if(!user){
+        res.render('user/wrongInfo.ejs')
+    }else{
+        const passwordMatch = bcrypt.compareSync(req.body.password, user.password)
+        if(passwordMatch){
+            console.log(req.session);
+            req.session.username = req.body.username;
+            req.session.loggedIn = true;
+            res.redirect('/games')
         }else{
-            const passwordMatch = bcrypt.compareSync(req.body.password, user.password)
-            if(passwordMatch){
-                console.log(req.session);
-                req.session.username = req.body.username;
-                req.session.loggedIn = true;
-                res.redirect('/games')
-            }else{
-                res.render('user/wrongInfo.ejs')
-            }
+            res.render('user/wrongInfo.ejs')
         }
-
+    }
     }catch(err){
         res.sendStatus(400).json(err)
     }
