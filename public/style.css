@@ -66,7 +66,7 @@ main{
 .input{
   max-width: 469px;
 }
-.has-text-danger{
+.has-background-danger-dark{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -95,13 +95,6 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: max-content;
-  color: rgb(126, 11, 103);
 }
 #leaveAlone{
   margin-bottom: 205px;
